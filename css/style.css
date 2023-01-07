@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --sky-blue: #228bcc;
+  --white: #ffffff;
+  --black: #2f2a2f;
+  /* transition  */
+  --tran-05: all 0.5s ease;
+}
+.side-nav {
+  background: var(--sky-blue);
+  width: 260px;
+  border-radius: 0 10px 10px 0;
+  transition: var(--tran-05);
+  height: 100vh;
+  padding: 40px 0 20px 10px;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.side-nav.active {
+  width: 80px;
+}
+/* .side-nav.active .navlinks ul li a .title {
+  display: none;
+} */
+.side-nav .navlinks ul {
+  list-style: none;
+  width: 100%;
+}
+.side-nav .navlinks ul li {
+  position: relative;
+}
+.side-nav .navlinks ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  line-height: 70px;
+  display: block;
+  font-size: 22px;
+  width: 100%;
+}
+.side-nav .navlinks ul li a .icon {
+  text-align: center;
+  margin: 0 20px;
+  display: inline;
+}
+.side-nav .navlinks ul li a .title {
+  transition: var(--tran-05);
+  display: inline;
+}
+.side-nav.active .navlinks ul li a .title {
+  display: none;
+}
+.side-nav .navlinks ul li.active {
+  background: var(--white);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.side-nav .navlinks ul li.active a {
+  color: var(--black);
+}
+.side-nav .navlinks ul li.active b:nth-child(1) {
+  background: var(--white);
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+.side-nav .navlinks ul li.active b:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sky-blue);
+  border-bottom-right-radius: 20px;
+}
+.side-nav .navlinks ul li.active b:nth-child(2) {
+  background: var(--white);
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+.side-nav .navlinks ul li.active b:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sky-blue);
+  border-top-right-radius: 20px;
+}
+.toogle-icon {
+  position: absolute;
+  top: 20px;
+  right: -55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
